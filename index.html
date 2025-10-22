@@ -1,201 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcelino Putra - Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcelino Putra - Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
-        }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 30px; /* spacing between image and text */
+    }
 
-        header {
-            background-color: #f8f9fa;
-            border-bottom: 1px solid #e9ecef;
-            padding: 20px 0;
-        }
+    .profile-image {
+      flex-shrink: 0;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
+    .profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;  
+      display: block;
+    }
 
-        nav a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
+    /* --- RIGHT SIDE CONTENT --- */
+    .info h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 8px;
+    }
 
-        nav a:hover {
-            color: #666;
-        }
+    .info p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
 
-        nav a.active {
-            color: #000;
-            border-bottom: 2px solid #333;
-            padding-bottom: 2px;
-        }
+    .info a {
+      color: #0066cc;
+      text-decoration: none;
+    }
 
-        main {
-            min-height: calc(100vh - 200px);
-            padding: 60px 0;
-        }
+    .info a:hover {
+      text-decoration: underline;
+    }
 
-        .hero {
-            text-align: center;
-            padding: 80px 0;
-        }
+    footer {
+      margin-top: 80px;
+      background-color: #f8f9fa;
+      border-top: 1px solid #e9ecef;
+      padding: 20px 0;
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+    }
 
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 300;
-            margin-bottom: 20px;
-            color: #000;
-        }
+    footer a {
+      color: #333;
+      text-decoration: none;
+    }
 
-        .hero p {
-            font-size: 1.25rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto 40px;
-        }
+    footer a:hover {
+      color: #000;
+    }
 
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background-color: #e9ecef;
-            margin: 0 auto 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            font-size: 0.9rem;
-        }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
 
-        .cta-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #333;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #555;
-        }
-
-        .about-section {
-            max-width: 700px;
-            margin: 60px auto 0;
-            padding: 40px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-        }
-
-        .about-section h2 {
-            font-size: 1.75rem;
-            font-weight: 400;
-            margin-bottom: 20px;
-            color: #000;
-        }
-
-        .about-section p {
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        footer {
-            background-color: #f8f9fa;
-            border-top: 1px solid #e9ecef;
-            padding: 30px 0;
-            text-align: center;
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: #333;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #000;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            nav {
-                gap: 20px;
-            }
-
-            .about-section {
-                padding: 30px 20px;
-            }
-        }
-    </style>
+      .info h1 {
+        margin-top: 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <nav class="container">
-            <a href="index.html" class="active">Home</a>
-            <a href="projects.html">Projects</a>
-        </nav>
-    </header>
+  <!-- MAIN PROFILE SECTION -->
+  <div class="container">
+    <div class="profile-image">
+      <!-- Replace with your photo -->
+      <img src="resources/profile.jpg" alt="Marcelino Putra">
+    </div>
 
-    <main>
-        <div class="container">
-            <section class="hero">
-                <div class="profile-image">
-                    [Profile Photo]
-                </div>
-                <h1>Marcelino Putra</h1>
-                <p>Creative developer and designer building thoughtful digital experiences</p>
-                <a href="projects.html" class="cta-button">View My Work</a>
-            </section>
+    <div class="info">
+        <h1>Marcelino Putra</h1>
 
-            <section class="about-section">
-                <h2>About Me</h2>
-                <p>Hello! I'm a passionate developer with a focus on creating clean, functional, and user-centered solutions. I enjoy working across the full stack and have experience in web development, design, and problem-solving.</p>
-                <p>When I'm not coding, you can find me exploring new technologies, contributing to open source, or working on personal projects that challenge me to grow.</p>
-                <p>Feel free to explore my projects and get in touch if you'd like to collaborate!</p>
-            </section>
+        <p>19, Computer Science, C++, Rust, Biking, Kerbal Space Program, Go Mariners!<br>
+        Based in Malaysia. Find me in the local Bevy Community</p>
+
+        <p>Also do read my Thesis! <br>Drop me an email if you would like to request the software :)</p>
+
+        <p>
+            <a href="projects.html">Projects</a> • 
+            <a href="https://github.com/mrclputra" target="_blank">GitHub</a> • 
+            <a href="https://www.linkedin.com/in/marcel-putra-39455923b/" target="_blank">LinkedIn</a>
+        </p>
+
+        <p style="font-size: 0.9rem; color: #888;">Posts and opinions are my own.</p>
+
+        <!-- Contact section -->
+        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #ddd;">
+            <p style="font-weight: 600; margin-bottom: 8px;">Contact Me</p>
+            <p style="font-size: 0.95rem; color: #555; line-height: 1.5;">
+            marcelino.ares.putra@gmail.com &nbsp;•&nbsp; +60 1381 33321
+            </p>
         </div>
-    </main>
+    </div>
+  </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Marcelino Putra. All rights reserved.</p>
-            <p><a href="https://github.com/marcelinoputra" target="_blank">GitHub</a></p>
-        </div>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Marcelino Putra. All rights reserved.</p>
+  </footer>
 </body>
 </html>
