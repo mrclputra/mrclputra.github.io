@@ -109,10 +109,10 @@
     <div class="info">
         <h1>Marcelino Putra</h1>
 
-        <p>19, Computer Science, C++, Rust, Biking, Kerbal Space Program, Go Mariners!<br>
+        <p>19, Computer Science @APU '25, C++, Rust, Biking, Kerbal Space Program, <br>Go Mariners! 🔱🔱🔱<br>
         Based in Malaysia. Find me in the local Bevy Community</p>
 
-        <p>Also do read my Thesis! <br>Drop me an email if you would like to request the software :)</p>
+        <p>Also do read my Thesis! <br>Drop me an email if you would like to request a copy of the software :)</p>
 
         <p>
             <a href="projects.html">Projects</a> • 
@@ -131,6 +131,63 @@
         </div>
     </div>
   </div>
+
+  <!-- SHOWCASE SECTION -->
+  <div class="showcase" style="max-width: 1500px; margin: 0 auto; padding: 0 20px;">
+    <h2 style="
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 5px;
+    ">
+      Gallery
+    </h2>
+    <div class="showcase-grid" style="
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    ">
+      <a href="https://github.com/mrclputra/bevy_tracksat" target="_blank">
+        <img src="resources/mountains.jpg" alt="Bevy Tracksat Project" class="showcase-img">
+      </a>
+      <img src="resources/buildings.png" alt="Procedural Buildings Generator" class="showcase-img">
+      <img src="resources/fyp_v2.png" alt="Thesis Render" class="showcase-img">
+      <a href="https://github.com/mrclputra/bevy_tracksat" target="_blank">
+        <img src="resources/satellites.png" alt="Bevy Tracksat Software early prototype" class="showcase-img">
+      </a>
+      <a href="https://github.com/mrclputra/ofx_buddha" target="_blank">
+        <img src="resources/buddha.png" alt="OpenFrameworks Model Renderer" class="showcase-img">
+      </a>
+      <a href="https://github.com/mrclputra/ofx_ascii_player" target="_blank">
+        <img src="resources/ascii.png" alt="Video to ASCII converter" class="showcase-img">
+      </a>
+    </div>
+  </div>
+
+  <style>
+    .showcase-img {
+      width: 100%;
+      height: 400px; 
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .showcase-img:hover {
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 768px) {
+      .showcase-grid {
+        grid-template-columns: 1fr; /* stack on mobile */
+      }
+      .showcase-img {
+        height: 200px;
+      }
+    }
+  </style>
 
   <footer>
     <p>&copy; 2025 Marcelino Putra. All rights reserved.</p>
