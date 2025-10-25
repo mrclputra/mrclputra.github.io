@@ -1,196 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marcelino Putra - Portfolio</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcelino Putra - Portfolio</title>
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #fff;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .container {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 0 20px;
-      display: flex;
-      align-items: flex-start;
-      gap: 30px; /* spacing between image and text */
-    }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
 
-    .profile-image {
-      flex-shrink: 0;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      overflow: hidden;
-    }
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+        }
 
-    .profile-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;  
-      display: block;
-    }
+        .profile-image {
+            flex-shrink: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
 
-    /* --- RIGHT SIDE CONTENT --- */
-    .info h1 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #000;
-      margin-bottom: 8px;
-    }
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
 
-    .info p {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 10px;
-    }
+        .info h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 8px;
+        }
 
-    .info a {
-      color: #0066cc;
-      text-decoration: none;
-    }
+        .info p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
 
-    .info a:hover {
-      text-decoration: underline;
-    }
+        .info a {
+            color: #0066cc;
+            text-decoration: none;
+        }
 
-    footer {
-      margin-top: 80px;
-      background-color: #f8f9fa;
-      border-top: 1px solid #e9ecef;
-      padding: 20px 0;
-      text-align: center;
-      color: #666;
-      font-size: 0.9rem;
-    }
+        .info a:hover {
+            text-decoration: underline;
+        }
 
-    footer a {
-      color: #333;
-      text-decoration: none;
-    }
+        footer {
+            margin-top: 80px;
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            padding: 20px 0;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
 
-    footer a:hover {
-      color: #000;
-    }
+        footer a {
+            color: #333;
+            text-decoration: none;
+        }
 
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
+        footer a:hover {
+            color: #000;
+        }
 
-      .info h1 {
-        margin-top: 15px;
-      }
-    }
-  </style>
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .info h1 {
+                margin-top: 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <!-- MAIN PROFILE SECTION -->
-  <div class="container">
-    <div class="profile-image">
-      <!-- Replace with your photo -->
-      <img src="resources/profile.jpg" alt="Marcelino Putra">
-    </div>
+    <div class="container">
+        <div class="profile-image">
+            <img src="resources/profile.jpg" alt="Marcelino Putra">
+        </div>
 
-    <div class="info">
-        <h1>Marcelino Putra</h1>
+        <div class="info">
+            <h1>Marcelino Putra</h1>
 
-        <p>19, Computer Science @APU '25, C++, Rust, Biking, Kerbal Space Program, <br>Go Mariners! 🔱🔱🔱<br>
-        Based in Malaysia. Find me in the local Bevy Community</p>
-
-        <p>Also do read my Thesis! <br>Drop me an email if you would like to request a copy of the software :)</p>
-
-        <p>
-            <a href="projects.html">Projects</a> • 
-            <a href="https://github.com/mrclputra" target="_blank">GitHub</a> • 
-            <a href="https://www.linkedin.com/in/marcel-putra-39455923b/" target="_blank">LinkedIn</a>
-        </p>
-
-        <p style="font-size: 0.9rem; color: #888;">Posts and opinions are my own.</p>
-
-        <!-- Contact section -->
-        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #ddd;">
-            <p style="font-weight: 600; margin-bottom: 8px;">Contact Me</p>
-            <p style="font-size: 0.95rem; color: #555; line-height: 1.5;">
-            marcelino.ares.putra@gmail.com &nbsp;•&nbsp; +60 1381 33321
+            <p>19, Computer Science @APU '25, C++, Rust, Biking, Kerbal Space Program, <br>Go Mariners! 🔱🔱🔱<br>
+                Based in Malaysia. Find me in the local Bevy Community
             </p>
+
+            <p>Also do read my Thesis! <br>Drop me an email if you would like to request a copy of the software :)</p>
+
+            <p>
+                <a href="projects.html">Projects</a> •
+                <a href="https://github.com/mrclputra" target="_blank">GitHub</a> •
+                <a href="https://www.linkedin.com/in/marcel-putra-39455923b/" target="_blank">LinkedIn</a>
+            </p>
+
+            <p style="font-size: 0.9rem; color: #888;">Posts and opinions are my own.</p>
+
+            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #ddd;">
+                <p style="font-weight: 600; margin-bottom: 8px;">Contact Me</p>
+                <p style="font-size: 0.95rem; color: #555; line-height: 1.5;">
+                    marcelino.ares.putra@gmail.com &nbsp;•&nbsp; +60 1381 33321
+                </p>
+            </div>
         </div>
     </div>
-  </div>
 
-  <!-- SHOWCASE SECTION -->
-  <div class="showcase" style="max-width: 1500px; margin: 0 auto; padding: 0 20px;">
-    <h2 style="
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #000;
-      margin-bottom: 15px;
-      border-bottom: 1px solid #e5e5e5;
-      padding-bottom: 5px;
-    ">
-      Gallery
-    </h2>
-    <div class="showcase-grid" style="
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    ">
-      <a href="https://github.com/mrclputra/bevy_tracksat" target="_blank">
-        <img src="resources/mountains.jpg" alt="Bevy Tracksat Project" class="showcase-img">
-      </a>
-      <img src="resources/buildings.png" alt="Procedural Buildings Generator" class="showcase-img">
-      <img src="resources/fyp_v2.png" alt="Thesis Render" class="showcase-img">
-      <a href="https://github.com/mrclputra/bevy_tracksat" target="_blank">
-        <img src="resources/satellites.png" alt="Bevy Tracksat Software early prototype" class="showcase-img">
-      </a>
-      <a href="https://github.com/mrclputra/ofx_buddha" target="_blank">
-        <img src="resources/buddha.png" alt="OpenFrameworks Model Renderer" class="showcase-img">
-      </a>
-      <a href="https://github.com/mrclputra/ofx_ascii_player" target="_blank">
-        <img src="resources/ascii.png" alt="Video to ASCII converter" class="showcase-img">
-      </a>
+    <div class="showcase" style="max-width: 1500px; margin: 0 auto; padding: 0 20px;">
+        <h2 style="
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 5px;
+        ">
+            Gallery
+        </h2>
+
+        <div class="showcase-grid" style="
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        ">
+            <a href="https://github.com/mrclputra/bevy_tracksat" target="_blank">
+                <img src="resources/mountains.jpg" alt="Bevy Tracksat Project" class="showcase-img">
+            </a>
+            <img src="resources/buildings.png" alt="Procedural Buildings Generator" class="showcase-img">
+            <img src="resources/fyp_v2.png" alt="Thesis Render" class="showcase-img">
+            <a href="https://github.com/mrclputra/bevy_tracksat" target="_blank">
+                <img src="resources/satellites.png" alt="Bevy Tracksat Software early prototype" class="showcase-img">
+            </a>
+            <a href="https://github.com/mrclputra/ofx_buddha" target="_blank">
+                <img src="resources/buddha.png" alt="OpenFrameworks Model Renderer" class="showcase-img">
+            </a>
+            <a href="https://github.com/mrclputra/ofx_ascii_player" target="_blank">
+                <img src="resources/ascii.png" alt="Video to ASCII converter" class="showcase-img">
+            </a>
+        </div>
     </div>
-  </div>
 
-  <style>
-    .showcase-img {
-      width: 100%;
-      height: 400px; 
-      object-fit: cover;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
+    <style>
+        .showcase-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
 
-    .showcase-img:hover {
-      transform: scale(1.02);
-    }
+        .showcase-img:hover {
+            transform: scale(1.02);
+        }
 
-    @media (max-width: 768px) {
-      .showcase-grid {
-        grid-template-columns: 1fr; /* stack on mobile */
-      }
-      .showcase-img {
-        height: 200px;
-      }
-    }
-  </style>
+        @media (max-width: 768px) {
+            .showcase-grid {
+                grid-template-columns: 1fr;
+            }
 
-  <footer>
-    <p>&copy; 2025 Marcelino Putra. All rights reserved.</p>
-  </footer>
+            .showcase-img {
+                height: 200px;
+            }
+        }
+    </style>
+
+    <footer>
+        <p>&copy; 2025 Marcelino Putra. All rights reserved.</p>
+    </footer>
 </body>
 </html>
