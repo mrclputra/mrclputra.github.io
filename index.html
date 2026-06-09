@@ -21,7 +21,7 @@
 
         .container {
             max-width: 900px;
-            margin: 60px auto;
+            margin: 60px auto 20px;
             padding: 0 20px;
             display: flex;
             align-items: flex-start;
@@ -66,7 +66,7 @@
         }
 
         footer {
-            margin-top: 80px;
+            margin-top: 20px;
             background-color: #f8f9fa;
             border-top: 1px solid #e9ecef;
             padding: 20px 0;
@@ -107,14 +107,23 @@
         <div class="info">
             <h1>Marcelino Putra</h1>
 
-            <p>20, Computer Science @APU '25, C++, Rust, Biking, Kerbal Space Program, <br>Go Mariners! 🔱🔱🔱<br>
+            <p>20, Computer Science @APU '25, C++, Rust, Python, Biking, Kerbal Space Program, <br>
+                Go Mariners! 🔱🔱🔱<br>
                 Based in Malaysia. Find me in the local Bevy Community
             </p>
 
-            <p>Also do read my Thesis! <br>Drop me an email if you would like to request a copy of the software :)</p>
+            <p>
+                - APU ACM SIGGRAPH Student Chapter Member<br>
+                - OpenGL dev
+            </p>
+
+            <p>Also do read my Thesis! <br>
+                Drop me an email if you would like to request a copy of the software :)
+            </p>
 
             <p>
-                <a href="projects.html">Projects</a> •
+                <!-- <a href="projects.html">Projects</a> • -->
+                <a href="https://github.com/mrclputra?tab=repositories&q=&type=public&language=&sort=stargazers">Projects</a> •
                 <a href="https://github.com/mrclputra" target="_blank">GitHub</a> •
                 <a href="https://www.linkedin.com/in/marcel-putra-39455923b/" target="_blank">LinkedIn</a>
             </p>
@@ -124,41 +133,57 @@
             <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #ddd;">
                 <p style="font-weight: 600; margin-bottom: 8px;">Contact Me</p>
                 <p style="font-size: 0.95rem; color: #555; line-height: 1.5;">
-                    marcelino.ares.putra@gmail.com &nbsp;•&nbsp; +60 1381 33321
+                    • marcelino.ares.putra@gmail.com<br>
+                    • TP066419@mail.apu.edu.my
+                    <!-- marcelino.ares.putra@gmail.com &nbsp;•&nbsp; TP066419@mail.apu.edu.my -->
                 </p>
             </div>
         </div>
     </div>
 
-    <div class="showcase" style="max-width: 1500px; margin: 0 auto; padding: 0 20px;">
+    <div class="showcase" style="max-width: 1200px; margin: 0px auto 0; padding: 0 20px;">
         <h2 style="
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 600;
             color: #000;
             margin-bottom: 15px;
             border-bottom: 1px solid #e5e5e5;
             padding-bottom: 5px;
         ">
-            Gallery
+            Project Gallery
         </h2>
 
         <div class="showcase-grid" style="
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
         ">
-            <a href="https://github.com/mrclputra/bevy_tracksat" target="_blank">
-                <img src="resources/mountains.jpg" alt="Bevy Tracksat Project" class="showcase-img">
+            <a href="https://github.com/mrclputra/Caldera" target="_blank" style="position:relative; display:block; overflow:hidden; border-radius:6px;">
+                <img src="resources/Caldera_UfhpCkFnvW.jpg" alt="Caldera" class="showcase-img" data-pair="4">
+                <img src="resources/Caldera_GHI6KrxQre.jpg" alt="Caldera" class="showcase-img" data-pair="4" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
+
             </a>
-            <img src="resources/buildings.png" alt="Procedural Buildings Generator" class="showcase-img">
-            <img src="resources/fyp_v2.png" alt="Thesis Render" class="showcase-img">
-            <a href="https://github.com/mrclputra/bevy_tracksat" target="_blank">
-                <img src="resources/satellites.png" alt="Bevy Tracksat Software early prototype" class="showcase-img">
+            <a href="https://github.com/mrclputra/bevy_tracksat" target="_blank" style="position:relative; display:block; overflow:hidden; border-radius:6px;">
+                <img src="resources/mountains.jpg" alt="Bevy Tracksat Project" class="showcase-img" data-pair="1">
+                <img src="resources/satellites.png" alt="Bevy Tracksat Software early prototype" class="showcase-img" data-pair="1" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
             </a>
-            <a href="https://github.com/mrclputra/ofx_buddha" target="_blank">
-                <img src="resources/buddha.png" alt="OpenFrameworks Model Renderer" class="showcase-img">
+            <a href="https://github.com/mrclputra/bevy_WeaverGen_V3" target="_blank" style="position:relative; display:block; overflow:hidden; border-radius:6px;">
+                <img src="resources/buildings.png" alt="Procedural Buildings Generator" class="showcase-img" data-pair="2">
+                <img src="resources/fyp_v2.png" alt="Thesis Render" class="showcase-img" data-pair="2" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
             </a>
-            <a href="https://github.com/mrclputra/ofx_ascii_player" target="_blank">
+            <a href="https://github.com/mrclputra/MerlinGL" target="_blank" style="position:relative; display:block; overflow:hidden; border-radius:6px;">
+                <img src="resources/Sandbox_CJQ0hVdbmF.jpg" alt="MerlinGL Sandbox" class="showcase-img" data-pair="3">
+                <img src="resources/Sandbox_YjYo35QXNg.png" alt="MerlinGL Sandbox" class="showcase-img" data-pair="3" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
+                <img src="resources/Sandbox.png" alt="MerlinGL Sandbox" class="showcase-img" data-pair="3" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
+            </a>
+            <a href="https://github.com/mrclputra/KestrelGL" target="_blank" style="position:relative; display:block; overflow:hidden; border-radius:6px;">
+                <img src="resources/KestrelGL_GABdJiYaBU.gif" alt="KestrelGL" class="showcase-img" data-pair="5">
+                <img src="resources/KestrelGL_D5BrKsnBUd.jpg" alt="KestrelGL" class="showcase-img" data-pair="5" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
+                <img src="resources/KestrelGL_TpyQbNgv4p.jpg" alt="KestrelGL" class="showcase-img" data-pair="5" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
+                <img src="resources/KestrelGL_wire.png" alt="KestrelGL" class="showcase-img" data-pair="5" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
+                <img src="resources/KestrelGL_pdy57cjh6y.png" alt="KestrelGL" class="showcase-img" data-pair="5" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
+            </a>
+            <a href="https://github.com/mrclputra/ofx_ascii_player" target="_blank" style="display:block; overflow:hidden; border-radius:6px;">
                 <img src="resources/ascii.png" alt="Video to ASCII converter" class="showcase-img">
             </a>
         </div>
@@ -166,30 +191,65 @@
 
     <style>
         .showcase-img {
+            display: block;
             width: 100%;
-            height: 400px;
+            height: 220px;
             object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
+            border-radius: 6px;
+            transition: transform 0.3s ease, opacity 0.5s ease;
         }
 
-        .showcase-img:hover {
-            transform: scale(1.02);
+        .showcase-grid a:hover .showcase-img {
+            transform: scale(1.03);
         }
 
         @media (max-width: 768px) {
             .showcase-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .showcase-img {
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .showcase-grid {
                 grid-template-columns: 1fr;
             }
-
             .showcase-img {
-                height: 200px;
+                height: 180px;
             }
         }
     </style>
 
+    <script>
+        const pairs = {};
+        document.querySelectorAll('[data-pair]').forEach(img => {
+            const key = img.dataset.pair;
+            if (!pairs[key]) pairs[key] = [];
+            pairs[key].push(img);
+        });
+
+        Object.values(pairs).forEach(imgs => {
+            let i = 0;
+            setInterval(() => {
+                imgs[i].style.opacity = '0';
+                i = (i + 1) % imgs.length;
+                imgs[i].style.opacity = '1';
+            }, 3000);
+        });
+    </script>
+
+    <hr style="width: 120px; margin: 40px auto 0; border: none; border-top: 1px solid #ccc;">
+
+    <div style="max-width: 1200px; margin: 40px auto 0; padding: 0 20px; text-align: center;">
+        <a href="https://www.worldwildlife.org/" target="_blank">
+            <img src="resources/wwfpanda.gif" style="width:480px; object-fit:cover;">
+        </a>
+    </div>
+
     <footer>
-        <p>&copy; 2025 Marcelino Putra. All rights reserved.</p>
+        <p>&copy; 2025 Marcel Putra. All rights reserved.</p>
     </footer>
 </body>
 </html>
