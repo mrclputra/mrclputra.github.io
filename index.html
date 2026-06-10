@@ -3,294 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcelino Putra - Portfolio</title>
+    <title>mrclputra</title> <!-- thinking of finding a better title sometime -->
 
     <script src="gallery.js" defer></script>
+    <script src="counter.js" defer></script>
+    <script data-goatcounter="https://mrclputra.goatcounter.com/count"async src="//gc.zgo.at/count.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-    <style>
-        html {
-            zoom: 0.9;
-            /* zoom: 1.0; */
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; */
-            font-family: 'Courier Prime', serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
-            opacity: 1;
-            transition: opacity 0.3s ease;
-
-            @starting-style {
-                opacity: 0;
-            }
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 60px auto 20px;
-            padding: 0 20px;
-            display: flex;
-            align-items: flex-start;
-            gap: 30px;
-
-            @media (max-width: 768px) {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-
-                & .info h1 {
-                    margin-top: 15px;
-                }
-            }
-        }
-
-        .profile-sidebar {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 4px;
-            flex-shrink: 0;
-            width: 180px;
-
-            & > img:first-of-type {
-                margin-top: 10px;
-            }
-        }
-
-        .profile-image {
-            flex-shrink: 0;
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            overflow: hidden;
-
-            & img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-            }
-        }
-
-        .info {
-            & h1 {
-                font-size: 1.8rem;
-                font-weight: 600;
-                color: #000;
-                margin-bottom: 8px;
-            }
-
-            & p {
-                font-size: 1rem;
-                color: #555;
-                margin-bottom: 10px;
-            }
-
-            & a {
-                color: #0066cc;
-                text-decoration: none;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-
-            & .disclaimer {
-                font-size: 0.9rem;
-                color: #888;
-            }
-
-            & .contact {
-                margin-top: 20px;
-                padding-top: 15px;
-                border-top: 1px solid #ddd;
-
-                & .contact-label {
-                    font-weight: 600;
-                    margin-bottom: 8px;
-                }
-
-                & .contact-details {
-                    font-size: 0.95rem;
-                    line-height: 1.5;
-                }
-            }
-        }
-
-        footer {
-            margin-top: 20px;
-            background-color: #f8f9fa;
-            border-top: 1px solid #e9ecef;
-            padding: 20px 0;
-            text-align: center;
-            color: #666;
-            font-size: 0.9rem;
-
-            & a {
-                color: #333;
-                text-decoration: none;
-
-                &:hover {
-                    color: #000;
-                }
-            }
-        }
-
-        .showcase {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-
-            & h2 {
-                font-size: 1.6rem;
-                font-weight: 600;
-                color: #000;
-                margin-bottom: 15px;
-                border-bottom: 1px solid #e5e5e5;
-                padding-bottom: 5px;
-            }
-        }
-
-        .showcase-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-
-            & a {
-                position: relative;
-                display: block;
-                overflow: hidden;
-                border-radius: 6px;
-
-                &:hover .showcase-img {
-                    transform: scale(1.03);
-                }
-
-                &::after {
-                    content: '';
-                    position: absolute;
-                    inset: 0;
-                    background: rgba(0, 0, 0, 0) url('resources/link.png') center / 24px no-repeat;
-                    border-radius: 6px;
-                    transition: background-color 0.3s ease;
-                    pointer-events: none;
-                    opacity: 0;
-                }
-
-                &:hover::after {
-                    background-color: rgba(0, 0, 0, 0.5);
-                    opacity: 1;
-                }
-            }
-
-            @media (max-width: 768px) {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            @media (max-width: 480px) {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .showcase-img {
-            display: block;
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 6px;
-            transition: transform 0.3s ease, opacity 0.5s ease;
-
-            /* overlay images - cycled by gallery.js */
-            &:not(:first-child) {
-                opacity: 0;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-
-            @media (max-width: 768px) {
-                height: 160px;
-            }
-
-            @media (max-width: 480px) {
-                height: 180px;
-            }
-        }
-
-        .extras {
-            max-width: 1200px;
-            margin: 40px auto 0;
-            padding: 0 20px;
-            text-align: center;
-
-            & .extras-images {
-                display: flex;
-                gap: 10px;
-                justify-content: center;
-                margin-top: 20px;
-                margin-bottom: 20px;
-            }
-
-            & .extras-img {
-                height: 120px;
-                object-fit: cover;
-            }
-
-            & > a img {
-                margin-top: 10px;
-            }
-        }
-
-        .goodies-link {
-            text-align: center;
-            margin-top: 20px;
-
-            & a {
-                color: #0066cc;
-            }
-        }
-
-        .wwf-section {
-            max-width: 1200px;
-            margin: 20px auto 0;
-            padding: 0 20px;
-            text-align: center;
-
-            & img {
-                width: 440px;
-                object-fit: cover;
-            }
-        }
-        @property --wave {
-            syntax: '<number>';
-            initial-value: 0;
-            inherits: false;
-        }
-
-        @keyframes wave-roll {
-            to { --wave: 6.283185; }
-        }
-
-        .wavy-trident {
-            display: inline-block;
-            animation: wave-roll 2.0s linear infinite;
-            translate: 0 calc(sin(var(--nth) * 1.2 - var(--wave)) * 2px); /* I like this style already */
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <!-- TODO: figure out how to make this website work on mobile -->
@@ -302,14 +24,22 @@
             <div class="profile-image">
                 <img src="resources/profile.jpg" alt="Marcelino Putra">
             </div>
-            <img src="resources/88x31/gc_yosemite.gif" width="88" height="31" alt="">
-            <img src="resources/88x31/opencontent.gif" width="88" height="31" alt="">
-            <img src="resources/88x31/internet-roadkill.gif" width="88" height="31" alt="">
-            <img src="resources/88x31/hotgraphics.gif" width="88" height="31" alt="">
-            <!-- <img src="resources/88x31/activeworlds.gif" width="88" height="31" alt=""> -->
-            <!-- <img src="resources/88x31/000010.gif" width="88" height="31" alt=""> -->
-            <!-- <img src="resources/88x31/affection.gif" width="88" height="31" alt=""> -->
-            <img src="resources/88x31/notepadpp3.gif" width="88" height="31" alt="">
+            <div class="sidebar-right">
+                <div class="blinkies">
+                    <img src="resources/88x31/gc_yosemite.gif" width="88" height="31" alt="">
+                    <!-- <img src="resources/88x31/opencontent.gif" width="88" height="31" alt=""> -->
+                    <img src="resources/88x31/internet-roadkill.gif" width="88" height="31" alt="">
+                    <img src="resources/88x31/hotgraphics.gif" width="88" height="31" alt="">
+                    <!-- <img src="resources/88x31/activeworlds.gif" width="88" height="31" alt=""> -->
+                    <!-- <img src="resources/88x31/000010.gif" width="88" height="31" alt=""> -->
+                    <!-- <img src="resources/88x31/affection.gif" width="88" height="31" alt=""> -->
+                    <img src="resources/88x31/notepadpp3.gif" width="88" height="31" alt="">
+                    <a href="https://open.spotify.com/playlist/3BeOLE5s1T92yMjcaUhqWr" target="_blank">
+                        <img src="resources/88x31/spotify.gif" width="88" height="31" alt="Spotify">
+                    </a>
+                </div>
+                <div class="view-counter"><span id="gc-count">...</span> views</div>
+            </div>
         </div>
 
         <div class="info">
@@ -329,7 +59,7 @@
                 Drop me an email if you see something you like :)
             </p>
 
-            <p>
+            <p class="links">
                 <!-- <a href="projects.html">Projects</a> • -->
                 <a href="https://github.com/mrclputra" target="_blank">GitHub</a> •
                 <a href="https://github.com/mrclputra?tab=repositories&q=&type=public&language=&sort=stargazers">Repositories</a> •
