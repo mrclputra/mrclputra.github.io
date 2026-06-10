@@ -275,6 +275,21 @@
                 object-fit: cover;
             }
         }
+        @property --wave {
+            syntax: '<number>';
+            initial-value: 0;
+            inherits: false;
+        }
+
+        @keyframes wave-roll {
+            to { --wave: 6.283185; }
+        }
+
+        .wavy-trident {
+            display: inline-block;
+            animation: wave-roll 2.0s linear infinite;
+            translate: 0 calc(sin(var(--nth) * 1.2 - var(--wave)) * 2px); /* I like this style already */
+        }
     </style>
 </head>
 
@@ -301,7 +316,7 @@
             <h1>Marcelino Putra</h1>
 
             <p>20, BSc Computer Science @APU '25, loves C++, Rust, Python, Biking, and Kerbal Space Program<br>
-                Go Mariners! 🔱🔱🔱<br>
+                Go Mariners! <span class="wavy-trident" style="--nth:0">🔱</span><span class="wavy-trident" style="--nth:1">🔱</span><span class="wavy-trident" style="--nth:2">🔱</span><br>
                 Based in Malaysia. Find me in the local Bevy Community
             </p>
 
@@ -374,7 +389,7 @@
 
     <div class="extras">
         <p>
-            I'm becoming very wary of roaming AI and of what I post on the internet. <br>Maybe we should undo it all and start anew with a clean slate. 🇮🇩
+            I'm becoming very wary of roaming AI and of what I post on the internet. <br>Maybe we should nuke it all and start anew. 🇮🇩
         </p>
         <div class="extras-images">
             <img src="resources/monkey.jpg" class="extras-img">
@@ -392,7 +407,8 @@
     <!-- <hr style="width: 120px; margin: 40px auto 0; border: none; border-top: 1px solid #ccc;"> -->
 
     <div class="goodies-link">
-        More Goodies <a href="goodies.html">Here</a>
+        <!-- More Goodies <a href="goodies.html">Here</a> -->
+        More <a href="goodies.html">Goodies</a>...
     </div>
 
     <!-- <div style="display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; margin: 20px auto 0; max-width: 900px; padding: 0 20px;">
