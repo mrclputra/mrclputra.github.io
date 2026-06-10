@@ -69,11 +69,11 @@ footer a:hover {
 }
 
 .blinkies {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    display: grid;
+    grid-template-columns: repeat(2, 88px);
     gap: 4px;
     margin-top: 10px;
+    justify-content: flex-end;
 }
 
 .blinkies a {
@@ -229,9 +229,9 @@ footer a:hover {
     font-size: 1.6rem;
     font-weight: 600;
     color: #000;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #e5e5e5;
-    padding-bottom: 5px;
+    margin-bottom: 10px;
+    /* border-bottom: 1px solid #e5e5e5; */
+    /* padding-bottom: 5px; */
 }
 
 .showcase-grid {
@@ -341,7 +341,7 @@ footer a:hover {
 
 .wwf-section {
     max-width: 1200px;
-    margin: 20px auto 0;
+    margin: 30px auto 0;
     padding: 0 20px;
     text-align: center;
 }
