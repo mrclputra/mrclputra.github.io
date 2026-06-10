@@ -29,6 +29,12 @@
             line-height: 1.6;
             color: #333;
             background-color: #fff;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+
+            @starting-style {
+                opacity: 0;
+            }
         }
 
         .container {
@@ -38,6 +44,29 @@
             display: flex;
             align-items: flex-start;
             gap: 30px;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                & .info h1 {
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        .profile-sidebar {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 4px;
+            flex-shrink: 0;
+            width: 180px;
+
+            & > img:first-of-type {
+                margin-top: 10px;
+            }
         }
 
         .profile-image {
@@ -46,35 +75,58 @@
             height: 180px;
             border-radius: 50%;
             overflow: hidden;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
         }
 
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
+        .info {
+            & h1 {
+                font-size: 1.8rem;
+                font-weight: 600;
+                color: #000;
+                margin-bottom: 8px;
+            }
 
-        .info h1 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #000;
-            margin-bottom: 8px;
-        }
+            & p {
+                font-size: 1rem;
+                color: #555;
+                margin-bottom: 10px;
+            }
 
-        .info p {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 10px;
-        }
+            & a {
+                color: #0066cc;
+                text-decoration: none;
 
-        .info a {
-            color: #0066cc;
-            text-decoration: none;
-        }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
 
-        .info a:hover {
-            text-decoration: underline;
+            & .disclaimer {
+                font-size: 0.9rem;
+                color: #888;
+            }
+
+            & .contact {
+                margin-top: 20px;
+                padding-top: 15px;
+                border-top: 1px solid #ddd;
+
+                & .contact-label {
+                    font-weight: 600;
+                    margin-bottom: 8px;
+                }
+
+                & .contact-details {
+                    font-size: 0.95rem;
+                    line-height: 1.5;
+                }
+            }
         }
 
         footer {
@@ -85,40 +137,157 @@
             text-align: center;
             color: #666;
             font-size: 0.9rem;
+
+            & a {
+                color: #333;
+                text-decoration: none;
+
+                &:hover {
+                    color: #000;
+                }
+            }
         }
 
-        footer a {
-            color: #333;
-            text-decoration: none;
+        .showcase {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+
+            & h2 {
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: #000;
+                margin-bottom: 15px;
+                border-bottom: 1px solid #e5e5e5;
+                padding-bottom: 5px;
+            }
         }
 
-        footer a:hover {
-            color: #000;
-        }
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
 
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
+            & a {
+                position: relative;
+                display: block;
+                overflow: hidden;
+                border-radius: 6px;
+
+                &:hover .showcase-img {
+                    transform: scale(1.03);
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(0, 0, 0, 0) url('resources/link.png') center / 24px no-repeat;
+                    border-radius: 6px;
+                    transition: background-color 0.3s ease;
+                    pointer-events: none;
+                    opacity: 0;
+                }
+
+                &:hover::after {
+                    background-color: rgba(0, 0, 0, 0.5);
+                    opacity: 1;
+                }
             }
 
-            .info h1 {
-                margin-top: 15px;
+            @media (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (max-width: 480px) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .showcase-img {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 6px;
+            transition: transform 0.3s ease, opacity 0.5s ease;
+
+            /* overlay images - cycled by gallery.js */
+            &:not(:first-child) {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            @media (max-width: 768px) {
+                height: 160px;
+            }
+
+            @media (max-width: 480px) {
+                height: 180px;
+            }
+        }
+
+        .extras {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding: 0 20px;
+            text-align: center;
+
+            & .extras-images {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            & .extras-img {
+                height: 120px;
+                object-fit: cover;
+            }
+
+            & > a img {
+                margin-top: 10px;
+            }
+        }
+
+        .goodies-link {
+            text-align: center;
+            margin-top: 20px;
+
+            & a {
+                color: #0066cc;
+            }
+        }
+
+        .wwf-section {
+            max-width: 1200px;
+            margin: 20px auto 0;
+            padding: 0 20px;
+            text-align: center;
+
+            & img {
+                width: 440px;
+                object-fit: cover;
             }
         }
     </style>
 </head>
 
 <!-- TODO: figure out how to make this website work on mobile -->
+<!-- TODO: add a guestbook :) -->
 
 <body>
     <div class="container">
-        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; width: 180px;">
+        <div class="profile-sidebar">
             <div class="profile-image">
                 <img src="resources/profile.jpg" alt="Marcelino Putra">
             </div>
-            <img src="resources/88x31/gc_yosemite.gif" width="88" height="31" alt="" style="margin-top: 10px;">
+            <img src="resources/88x31/gc_yosemite.gif" width="88" height="31" alt="">
             <img src="resources/88x31/opencontent.gif" width="88" height="31" alt="">
             <img src="resources/88x31/internet-roadkill.gif" width="88" height="31" alt="">
             <img src="resources/88x31/hotgraphics.gif" width="88" height="31" alt="">
@@ -152,11 +321,11 @@
                 <a href="https://www.linkedin.com/in/marcel-putra-39455923b/" target="_blank">LinkedIn</a>
             </p>
 
-            <p style="font-size: 0.9rem; color: #888;">Posts and opinions are my own.</p>
+            <p class="disclaimer">Posts and opinions are my own.</p>
 
-            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #ddd;">
-                <p style="font-weight: 600; margin-bottom: 8px;">Contact Me</p>
-                <p style="font-size: 0.95rem; color: #555; line-height: 1.5;">
+            <div class="contact">
+                <p class="contact-label">Contact Me</p>
+                <p class="contact-details">
                     • marcelino.ares.putra@gmail.com<br>
                     • TP066419@mail.apu.edu.my
                     <!-- marcelino.ares.putra@gmail.com &nbsp;•&nbsp; TP066419@mail.apu.edu.my -->
@@ -165,127 +334,65 @@
         </div>
     </div>
 
-    <div class="showcase" style="max-width: 1200px; margin: 0px auto 0; padding: 0 20px;">
-        <h2 style="
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: #000;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #e5e5e5;
-            padding-bottom: 5px;
-        ">
-            Projects
-        </h2>
+    <div class="showcase">
+        <h2>Projects</h2>
 
-        <div class="showcase-grid" style="
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-        ">
-            <a href="https://github.com/mrclputra/Caldera" target="_blank" style="position:relative; display:block; overflow:hidden; border-radius:6px;">
+        <div class="showcase-grid">
+            <a href="https://github.com/mrclputra/Caldera" target="_blank">
                 <img src="resources/Caldera_UfhpCkFnvW.jpg" class="showcase-img" data-pair="4">
-                <img src="resources/Caldera_GHI6KrxQre.jpg" class="showcase-img" data-pair="4" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
+                <img src="resources/Caldera_GHI6KrxQre.jpg" class="showcase-img" data-pair="4">
 
             </a>
-            <a href="https://github.com/mrclputra/bevy_tracksat" target="_blank" style="position:relative; display:block; overflow:hidden; border-radius:6px;">
+            <a href="https://github.com/mrclputra/bevy_tracksat" target="_blank">
                 <img src="resources/mountains.jpg" class="showcase-img" data-pair="1">
-                <img src="resources/satellites.png" class="showcase-img" data-pair="1" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
+                <img src="resources/satellites.png" class="showcase-img" data-pair="1">
             </a>
-            <a href="https://github.com/mrclputra/bevy_WeaverGen_V3" target="_blank" style="position:relative; display:block; overflow:hidden; border-radius:6px;">
+            <a href="https://github.com/mrclputra/bevy_WeaverGen_V3" target="_blank">
                 <img src="resources/voronoi_editor.gif" class="showcase-img" data-pair="2">
-                <img src="resources/fyp_v2.png" class="showcase-img" data-pair="2" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
-                <img src="resources/buildings.png" class="showcase-img" data-pair="2" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
+                <img src="resources/fyp_v2.png" class="showcase-img" data-pair="2">
+                <img src="resources/buildings.png" class="showcase-img" data-pair="2">
             </a>
-            <a href="https://github.com/mrclputra/MerlinGL" target="_blank" style="position:relative; display:block; overflow:hidden; border-radius:6px;">
+            <a href="https://github.com/mrclputra/MerlinGL" target="_blank">
                 <img src="resources/Sandbox_CJQ0hVdbmF.jpg" class="showcase-img" data-pair="3">
-                <img src="resources/Sandbox_YjYo35QXNg.png" class="showcase-img" data-pair="3" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
-                <img src="resources/Sandbox_zfsBJucI4Y.jpg" class="showcase-img" data-pair="3" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
-                <!-- <img src="resources/Sandbox.png" class="showcase-img" data-pair="3" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;"> -->
+                <img src="resources/Sandbox_YjYo35QXNg.png" class="showcase-img" data-pair="3">
+                <img src="resources/Sandbox_zfsBJucI4Y.jpg" class="showcase-img" data-pair="3">
+                <!-- <img src="resources/Sandbox.png" class="showcase-img" data-pair="3"> -->
             </a>
-            <a href="https://github.com/mrclputra/KestrelGL" target="_blank" style="position:relative; display:block; overflow:hidden; border-radius:6px;">
+            <a href="https://github.com/mrclputra/KestrelGL" target="_blank">
                 <img src="resources/KestrelGL_GABdJiYaBU.gif" class="showcase-img" data-pair="5">
-                <img src="resources/KestrelGL_D5BrKsnBUd.jpg" class="showcase-img" data-pair="5" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
-                <img src="resources/KestrelGL_TpyQbNgv4p.jpg" class="showcase-img" data-pair="5" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
-                <img src="resources/KestrelGL_wire.png" class="showcase-img" data-pair="5" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
-                <img src="resources/KestrelGL_EySC2QW3BR.png" class="showcase-img" data-pair="5" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
-                <img src="resources/KestrelGL_pdy57cjh6y.png" class="showcase-img" data-pair="5" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;">
+                <img src="resources/KestrelGL_D5BrKsnBUd.jpg" class="showcase-img" data-pair="5">
+                <img src="resources/KestrelGL_TpyQbNgv4p.jpg" class="showcase-img" data-pair="5">
+                <img src="resources/KestrelGL_wire.png" class="showcase-img" data-pair="5">
+                <img src="resources/KestrelGL_EySC2QW3BR.png" class="showcase-img" data-pair="5">
+                <img src="resources/KestrelGL_pdy57cjh6y.png" class="showcase-img" data-pair="5">
             </a>
-            <a href="https://github.com/mrclputra/ofx_ascii_player" target="_blank" style="position:relative; display:block; overflow:hidden; border-radius:6px;">
+            <a href="https://github.com/mrclputra/ofx_ascii_player" target="_blank">
                 <img src="resources/topgun.gif" class="showcase-img">
             </a>
         </div>
     </div>
 
-    <style>
-        .showcase-img {
-            display: block;
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 6px;
-            transition: transform 0.3s ease, opacity 0.5s ease;
-        }
-
-        .showcase-grid a:hover .showcase-img {
-            transform: scale(1.03);
-        }
-
-        .showcase-grid a::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0) url('resources/link.png') center / 24px no-repeat;
-            border-radius: 6px;
-            transition: background-color 0.3s ease;
-            pointer-events: none;
-            opacity: 0;
-        }
-
-        .showcase-grid a:hover::after {
-            background-color: rgba(0, 0, 0, 0.5);
-            opacity: 1;
-        }
-
-        @media (max-width: 768px) {
-            .showcase-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .showcase-img {
-                height: 160px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .showcase-grid {
-                grid-template-columns: 1fr;
-            }
-            .showcase-img {
-                height: 180px;
-            }
-        }
-    </style>
-
-    <div style="max-width: 1200px; margin: 40px auto 0; padding: 0 20px; text-align: center;">
+    <div class="extras">
         <p>
             I'm becoming very wary of roaming AI and of what I post on the internet. <br>Maybe we should undo it all and start anew with a clean slate. 🇮🇩
         </p>
-        <div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px; margin-bottom: 20px;">
-            <img src="resources/monkey.jpg" style="height:120px; object-fit: cover;">
-            <img src="resources/coin_normal.png" style="height:120px; object-fit: cover;">
-            <!-- <img src="resources/hospital.jpg" style="height: 120px; object-fit: cover;"> -->
+        <div class="extras-images">
+            <img src="resources/monkey.jpg" class="extras-img">
+            <img src="resources/coin_normal.png" class="extras-img">
+            <!-- <img src="resources/hospital.jpg" class="extras-img"> -->
         </div>
         <p>
             Will hopefully move to Linux sometime soon in the future, <br>but I'm currently a bit too dependent on the windows environment. :)
         </p>
         <a href="https://packages.msys2.org/packages/mingw-w64-x86_64-llvm" target="_blank">
-            <img src="resources/88x31/powered-llvm.gif" width="88" height="31" alt="" style="margin-top: 10px;">
+            <img src="resources/88x31/powered-llvm.gif" width="88" height="31" alt="">
         </a>
     </div>
 
     <!-- <hr style="width: 120px; margin: 40px auto 0; border: none; border-top: 1px solid #ccc;"> -->
 
-    <div style="text-align: center; margin-top: 20px;">
-        More Goodies <a href="goodies.html" style="color: #0066cc;">Here</a>
+    <div class="goodies-link">
+        More Goodies <a href="goodies.html">Here</a>
     </div>
 
     <!-- <div style="display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; margin: 20px auto 0; max-width: 900px; padding: 0 20px;">
@@ -295,10 +402,10 @@
         <img src="resources/88x31/notepadpp3.gif" width="88" height="31" alt="Notepad++">
     </div> -->
 
-    <!-- <div style="max-width: 1200px; margin: 10px auto 0; padding: 0 20px; text-align: center;"> -->
-    <div style="max-width: 1200px; margin: 20px auto 0; padding: 0 20px; text-align: center;">
+    <!-- <div class="wwf-section" style="margin-top: 10px;"> -->
+    <div class="wwf-section">
         <a href="https://www.worldwildlife.org/publications/60-actions-for-the-planet/" target="_blank">
-            <img src="resources/wwfpanda.gif" style="width:440px; object-fit:cover;">
+            <img src="resources/wwfpanda.gif">
         </a>
     </div>
 
