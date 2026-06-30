@@ -11,7 +11,7 @@ document.querySelectorAll('[data-pair]').forEach(img => {
     function next() {
         // gifs should be longer
         // const delay = 4000;
-        const delay = imgs[i].src.endsWith('.gif') ? 5000 : 2500;
+        const delay = imgs[i].src.endsWith('.gif') ? 10000 : 5000;
         setTimeout(() => {
             imgs[i].style.opacity = '0';
             i = (i + 1) % imgs.length;
