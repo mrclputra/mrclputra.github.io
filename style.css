@@ -82,8 +82,8 @@ footer a:hover {
 
 .profile-image {
     flex-shrink: 0;
-    width: 180px;
-    height: 180px;
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
     overflow: hidden;
 }
