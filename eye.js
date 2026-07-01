@@ -9,8 +9,8 @@ if (eyeDetails) {
 
     showCurrent();
 
-    eyeDetails.addEventListener('click', e => {
-        if (e.target.tagName === 'IMG') {
+    eyeDetails.addEventListener('toggle', () => {
+        if (!eyeDetails.open) {
             idx = (idx + 1) % imgs.length;
             showCurrent();
         }

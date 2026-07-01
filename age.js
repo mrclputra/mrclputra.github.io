@@ -3,7 +3,9 @@ const MS_PER_YEAR = 365.25 * 24 * 3600 * 1000;
 
 function tick() {
     const age = (Date.now() - BIRTH) / MS_PER_YEAR;
-    document.getElementById('age').textContent = age.toFixed(10);
+    const el = document.getElementById('age');
+    el.textContent = age.toFixed(10);
+    el.title = 'I was born on 10 April 2006';
     requestAnimationFrame(tick);
 }
 
