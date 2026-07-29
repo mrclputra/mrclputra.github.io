@@ -5,7 +5,7 @@ function tick() {
     const age = (Date.now() - BIRTH) / MS_PER_YEAR;
     const el = document.getElementById('age');
     el.textContent = age.toFixed(10);
-    el.title = 'I was born on 10 April 2006';
+    el.title = 'I was born on the 10th of April, 2006';
     requestAnimationFrame(tick);
 }
 
