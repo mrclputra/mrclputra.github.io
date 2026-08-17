@@ -325,29 +325,12 @@ footer a:hover {
 .showcase-grid a {
     position: relative;
     display: block;
-    overflow: hidden;
-    border-radius: 6px;
 }
 
-.showcase-grid a:hover .showcase-img {
-    transform: scale(1.03);
-}
-
-.showcase-grid a::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0) url('resources/link.png') center / 24px no-repeat;
-    /* background: rgba(0, 0, 0, 0); */
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-    pointer-events: none;
-    opacity: 0;
-}
-
-.showcase-grid a:hover::after {
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 1;
+.showcase-grid a:hover .showcase-img:first-child {
+    transform: scale(1.08);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 2;
 }
 
 .showcase-img {
@@ -356,7 +339,8 @@ footer a:hover {
     height: 220px;
     object-fit: cover;
     border-radius: 6px;
-    transition: transform 0.3s ease, opacity 0.5s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.5s ease;
 }
 
 /* overlay images - cycled by projects.js */
