@@ -331,18 +331,26 @@ footer a:hover {
 
 .showcase-grid a:hover {
     transform: rotate(0deg);
+    z-index: 2;
 }
 
-.showcase-grid a.featured {
-    outline: 3px dotted #000;
-    outline-offset: 3px;
+.showcase-grid a.featured::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border: 3px dotted #000;
     border-radius: 6px;
+    pointer-events: none;
+    transition: inset 0.2s ease;
+}
+
+.showcase-grid a.featured:hover::before {
+    inset: calc(-3% - 6px);
 }
 
 .showcase-grid a:hover .showcase-img {
     transform: scale(1.08);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    z-index: 2;
 }
 
 .showcase-img {
