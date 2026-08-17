@@ -417,13 +417,13 @@ footer a:hover {
     display: block;
 }
 
-.textbox {
+.quote {
     max-width: 1200px;
     margin: 20px auto 20px;
     padding: 0 20px;
 }
 
-.textbox summary {
+.quote summary {
     display: block;
     list-style: none;
     cursor: pointer;
@@ -432,19 +432,19 @@ footer a:hover {
     line-height: 1.4;
 }
 
-.textbox summary::before {
+.quote summary::before {
     content: "↠ Click Me!";
 }
 
-.textbox summary::-webkit-details-marker {
+.quote summary::-webkit-details-marker {
     display: none;
 }
 
-details[open].textbox summary::before {
+details[open].quote summary::before {
     content: "↡ UnClick Me!";
 }
 
-.textbox p {
+.quote p {
     margin-top: 10px;
     padding: 10px;
     border: 1px solid #333;
