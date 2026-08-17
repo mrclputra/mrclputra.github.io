@@ -325,9 +325,21 @@ footer a:hover {
 .showcase-grid a {
     position: relative;
     display: block;
+    transform: rotate(var(--r, 0deg));
+    transition: transform 0.2s ease;
 }
 
-.showcase-grid a:hover .showcase-img:first-child {
+.showcase-grid a:hover {
+    transform: rotate(0deg);
+}
+
+.showcase-grid a.featured {
+    outline: 3px dotted #000;
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+.showcase-grid a:hover .showcase-img {
     transform: scale(1.08);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     z-index: 2;
