@@ -96,6 +96,71 @@ footer a:hover {
     display: block;
 }
 
+.sidebar-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.webring-label {
+    width: 220px;
+    flex-shrink: 0;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #333;
+    text-align: center;
+    /* margin-top: 16px; */
+}
+
+.webring {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 220px;
+    flex-shrink: 0;
+    /* margin-bottom: 16px; */
+}
+
+.webring-arrow {
+    flex: 1;
+    display: block;
+    text-align: center;
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.webring-arrow:hover {
+    text-decoration: underline;
+}
+
+.webring-random {
+    flex-shrink: 0;
+    text-align: center;
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.webring-random:hover {
+    text-decoration: underline;
+}
+
+.tree-image {
+    flex-shrink: 0;
+    width: 220px;
+}
+
+.tree-image img {
+    width: 100%;
+    display: block;
+}
+
 .info h1 {
     font-size: 1.8rem;
     font-weight: 600;
@@ -182,6 +247,22 @@ footer a:hover {
         width: 140px;
         height: 140px;
         flex-shrink: 0;
+    }
+
+    .tree-image {
+        width: 140px;
+    }
+
+    .webring-label {
+        width: 140px;
+    }
+
+    .webring {
+        width: 140px;
+    }
+
+    .webring-random {
+        font-size: 0.65rem;
     }
 
     .sidebar-right {
@@ -314,7 +395,7 @@ footer a:hover {
 
 .extras {
     max-width: 1200px;
-    margin: 40px auto 0;
+    margin: 30px auto 0;
     padding: 0 20px;
     text-align: center;
 }
@@ -386,7 +467,7 @@ details[open].textbox summary::before {
 }
 
 .gallery {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 20px auto 0;
     padding: 0 20px;
 }
@@ -431,7 +512,7 @@ details[open].textbox summary::before {
     border: none;
     border-radius: 4px;
     padding: 20px;
-    max-width: min(90vw, 700px);
+    width: min(90vw, 700px);
     max-height: 90vh;
     background: #fff;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
