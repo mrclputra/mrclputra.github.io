@@ -9,7 +9,7 @@ const versions = [
     'If you are still inside, did you ever leave?'
 ];
 
-let toggleCount = 0;
+let toggleCount = 1;
 
 box.addEventListener('toggle', () => {
     if (!box.open) return;
