@@ -376,6 +376,14 @@ body {
     .extras-border img {
         width: 130px;
     }
+
+    .characters-row .char-bow {
+        width: 130px;
+    }
+
+    .characters-row .char-yari {
+        width: 151px;
+    }
 }
 
 .extras {
@@ -387,7 +395,10 @@ body {
 
 .extras-border {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: flex-end;
+    gap: 15px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -395,7 +406,25 @@ body {
 .extras-border img {
     width: 240px;
     max-width: 100%;
+    min-width: 0;
+    flex-shrink: 1;
     display: block;
+}
+
+.characters-row img {
+    height: auto;
+    max-width: 100%;
+    min-width: 0;
+    flex-shrink: 1;
+    display: block;
+}
+
+.characters-row .char-bow {
+    width: 240px;
+}
+
+.characters-row .char-yari {
+    width: 279px;
 }
 
 .quote {
