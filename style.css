@@ -284,14 +284,46 @@ body {
 
 .proverb-separator {
     max-width: 1200px;
-    margin: 60px auto 30px;
+    margin: 30px auto 40px;
     padding: 0 20px;
+    overflow: hidden;
 }
 
-.proverb-separator img {
+.proverb-track {
+    display: flex;
+}
+
+.proverb-track img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.proverb-track img:last-child {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .proverb-separator {
+        padding: 0;
+    }
+
+    .proverb-track {
+        width: fit-content;
+        animation: proverb-scroll 11.4s linear infinite;
+    }
+
+    .proverb-track img {
+        display: block;
+        width: auto;
+        height: 60px;
+        flex-shrink: 0;
+    }
+}
+
+@keyframes proverb-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
 }
 
 .showcase {
