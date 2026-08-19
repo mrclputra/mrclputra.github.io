@@ -142,6 +142,10 @@ body {
     display: block;
 }
 
+p {
+    font-size: 1rem;
+}
+
 .info h1 {
     font-size: 1.8rem;
     font-weight: 600;
@@ -150,7 +154,6 @@ body {
 }
 
 .info p {
-    font-size: 1rem;
     color: #555;
     margin-bottom: 10px;
 }
@@ -166,7 +169,7 @@ body {
 
 
 .info .disclaimer {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #888;
 }
 
@@ -182,7 +185,7 @@ body {
 }
 
 .contact-details {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     line-height: 1.5;
 }
 
@@ -194,16 +197,21 @@ body {
     letter-spacing: 0.02em;
 }
 
+/* THESE ARE THE CONFIGS FOR MOBILE!!!! */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
         align-items: stretch;
         margin-top: 30px;
-        gap: 25px;
+        gap: 4px;
     }
 
     .container .info {
         text-align: left;
+    }
+
+    p {
+        font-size: 0.9rem;
     }
 
     .container .info h1 {
@@ -225,21 +233,21 @@ body {
     }
 
     .profile-image {
-        width: 140px;
-        height: 140px;
+        width: 160px;
+        height: 160px;
         flex-shrink: 0;
     }
 
     .tree-image {
-        width: 140px;
+        width: 160px;
     }
 
     .webring-label {
-        width: 140px;
+        width: 160px;
     }
 
     .webring {
-        width: 140px;
+        width: 160px;
     }
 
     .webring-random {
@@ -503,7 +511,6 @@ details[open].quote summary::before {
     margin-top: 10px;
     padding: 10px;
     border: 1px solid #333;
-    font-size: 1.0rem;
     line-height: 1.5;
 }
 
