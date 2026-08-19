@@ -299,34 +299,20 @@ p {
 
 .proverb-track {
     display: flex;
+    width: fit-content;
+    animation: proverb-scroll 22.8s linear infinite;
 }
 
 .proverb-track img {
-    width: 100%;
-    height: auto;
     display: block;
-}
-
-.proverb-track img:last-child {
-    display: none;
+    width: auto;
+    height: 60px;
+    flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
     .proverb-separator {
         padding: 0;
-    }
-
-    .proverb-track {
-        width: fit-content;
-        animation: proverb-scroll 22.8s linear infinite;
-    }
-
-    .proverb-track img,
-    .proverb-track img:last-child {
-        display: block;
-        width: auto;
-        height: 60px;
-        flex-shrink: 0;
     }
 }
 
@@ -518,6 +504,13 @@ details[open].quote summary::before {
     margin-top: 10px;
 }
 
+.gallery-label {
+    display: block;
+    height: 38px;
+    width: auto;
+    margin: 40px auto 0;
+}
+
 .goodies-link {
     text-align: center;
     margin-top: 20px;
@@ -533,7 +526,7 @@ details[open].quote summary::before {
 }
 
 .gallery {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 20px auto 0;
     padding: 0 20px;
 }
@@ -548,8 +541,8 @@ details[open].quote summary::before {
 
 .gallery-board {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px 10px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0px 0px;
     padding: 10px 0 30px;
 }
 
@@ -571,6 +564,26 @@ details[open].quote summary::before {
     transform: rotate(0deg) scale(1.08);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .gallery-board {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .gallery-img {
+        padding: 6px 6px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-board {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery-img {
+        padding: 4px 4px 14px;
+    }
 }
 
 .lightbox {
