@@ -360,11 +360,9 @@ p {
     position: relative;
     display: block;
     transform: rotate(var(--r, 0deg));
-    transition: transform 0.2s ease;
 }
 
 .showcase-grid a:hover {
-    transform: rotate(0deg);
     z-index: 2;
 }
 
@@ -382,11 +380,6 @@ p {
     inset: calc(-3% - 6px);
 }
 
-.showcase-grid a:hover .showcase-img {
-    transform: scale(1.08);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
 .showcase-img {
     display: block;
     width: 100%;
@@ -395,6 +388,11 @@ p {
     border-radius: 6px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.5s ease;
+}
+
+.showcase-grid a:hover .showcase-img {
+    transform: scale(1.08);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* overlay images - cycled by projects.js */
