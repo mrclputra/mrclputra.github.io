@@ -32,18 +32,44 @@ body {
 
 /* index */
 
-.hero {
+.spacecraft-banner {
     max-width: 1200px;
     margin: 20px auto 0;
     padding: 0 20px;
     text-align: center;
 }
 
-.hero img {
+.spacecraft-banner img {
     width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+/* spacecraft.png is much wider than tall, so on narrow portrait phones
+   it renders as a thin strip. Rotating it 90deg lets it use the phone's
+   full height instead, since portrait phone aspect ratios are close to
+   this image's landscape aspect ratio rotated on its side. */
+@media (max-width: 600px) and (orientation: portrait) {
+    .spacecraft-banner {
+        width: 100%;
+        max-width: none;
+        aspect-ratio: 1608 / 2898;
+        padding: 0;
+        margin: 20px auto 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .spacecraft-banner img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: calc(100vw * 2898 / 1608);
+        max-width: none;
+        height: auto;
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
 }
 
 .container {
@@ -719,6 +745,5 @@ details[open].quote summary::before {
 .construction-images img {
     flex: 1;
     min-width: 0;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
 }
