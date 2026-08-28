@@ -99,6 +99,8 @@
         <a href="https://www.omniglot.com/conscripts/dovahzul.htm" target="_blank" class="proverb-track">
             <img src="resources/dragon.png" alt="">
             <img src="resources/dragon.png" alt="" aria-hidden="true">
+            <img src="resources/dragon.png" alt="" aria-hidden="true">
+            <img src="resources/dragon.png" alt="" aria-hidden="true">
         </a>
     </div>
 
@@ -163,8 +165,77 @@
         <a href="https://packages.msys2.org/packages/mingw-w64-x86_64-llvm" target="_blank">
             <img src="resources/88x31/powered-llvm.gif" width="88" height="31" alt="">
         </a>
-        <img src="resources/gallery_label.png" class="gallery-label" alt="">
     </div>
+
+    <details class="code-configs" open>
+        <summary>code-configs</summary>
+        <div class="code-configs-grid">
+            <div>
+                <span class="code-configs-label">.clang-format, yes 3-tab spacing is awesome</span>
+                <pre>BasedOnStyle: LLVM
+SeparateDefinitionBlocks: Leave
+IndentWidth: 3
+TabWidth: 3
+UseTab: Never
+ColumnLimit: 0
+
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignEscapedNewlines: Right
+AlignOperands: true
+AlignTrailingComments: true
+
+BreakBeforeBraces: Attach
+Cpp11BracedListStyle: true
+
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+
+SpaceAfterCStyleCast: false
+SpaceAfterTemplateKeyword: true
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 2
+SpacesInAngles: false
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+
+SortIncludes: false
+IncludeBlocks: Preserve</pre>
+            </div>
+            <div>
+                <span class="code-configs-label">run.sh, I use this template a lot</span>
+                <pre>#!/bin/bash
+set -e
+
+BUILD_DIR="build"
+VCPKG_PATH="${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+TARGET_NAME="caldera"
+
+#rm -rf "$BUILD_DIR"
+
+# use clang binaries
+cmake -B "$BUILD_DIR" -S . \
+  -G Ninja \
+  -DCMAKE_C_COMPILER="clang" \
+  -DCMAKE_CXX_COMPILER="clang++" \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DVCPKG_TARGET_TRIPLET=x64-mingw-dynamic \
+  -DCMAKE_TOOLCHAIN_FILE="$VCPKG_PATH" \
+  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+
+cmake --build "$BUILD_DIR"
+
+cd "$BUILD_DIR"
+./"$TARGET_NAME".exe</pre>
+            </div>
+        </div>
+    </details>
+    <img src="resources/gallery_label.png" class="gallery-label" alt="">
 
     <!-- TODO: implement an actual independent gallery page for all my cool pictures -->
     <div class="gallery">

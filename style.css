@@ -346,7 +346,7 @@ p {
 .proverb-track img {
     display: block;
     width: auto;
-    height: 60px;
+    height: 50px;
     flex-shrink: 0;
 }
 
@@ -356,9 +356,10 @@ p {
     }
 }
 
+
 @keyframes proverb-scroll {
     from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    to { transform: translateX(-25%); }
 }
 
 .showcase {
@@ -542,9 +543,66 @@ details[open].quote summary::before {
     margin-top: 10px;
 }
 
+.code-configs {
+    max-width: 1200px;
+    margin: 10px auto 0;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.code-configs summary {
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: #555;
+    list-style: none;
+    user-select: none;
+}
+
+.code-configs summary::-webkit-details-marker {
+    display: none;
+}
+
+.code-configs summary::before {
+    content: "↠ ";
+}
+
+details[open].code-configs summary::before {
+    content: "↡ ";
+}
+
+.code-configs-grid {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.code-configs-grid > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.code-configs-label {
+    display: block;
+    font-size: 0.75rem;
+    color: #888;
+    margin-bottom: 2px;
+}
+
+.code-configs pre {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: #333;
+    background: #fafafa;
+    text-align: left;
+    white-space: pre;
+    overflow-x: auto;
+}
+
 .gallery-label {
     display: block;
-    height: 38px;
+    height: 32px;
     width: auto;
     margin: 40px auto 0;
 }
