@@ -1,269 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mrclputra</title> <!-- thinking of finding a better title sometime -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>mrclputra</title> <!-- thinking of finding a better title sometime -->
 
-    <script src="projects.js" defer></script>
-    <script src="lightbox.js" defer></script>
-    <script src="counter.js" defer></script>
-    <script src="age.js" defer></script>
-    <script src="quote.js" defer></script>
-    <script data-goatcounter="https://mrclputra.goatcounter.com/count"async src="//gc.zgo.at/count.js"></script>
+   <script src="projects.js" defer></script>
+   <script src="lightbox.js" defer></script>
+   <script src="counter.js" defer></script>
+   <script src="age.js" defer></script>
+   <script src="quote.js" defer></script>
+   <script data-goatcounter="https://mrclputra.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inconsolata:wght@200..900&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
 </head>
 
 <!-- TODO: figure out how to make this website work on mobile -->
 <!-- TODO: add a guestbook :) -->
 
 <body>
-    <div class="container">
-        <div class="profile-sidebar">
-            <div class="profile-image">
-                <img src="resources/profile.jpg" alt="monkee">
+   <div class="container">
+      <div class="profile-sidebar">
+         <div class="profile-image">
+            <img src="resources/profile.jpg" alt="monkee">
+         </div>
+         <div class="sidebar-right">
+            <p class="webring-label">"Cult" Webring</p>
+            <div class="webring">
+               <a href="https://ring.liampas.ca/left" class="webring-arrow" aria-label="Previous site">&larr;</a>
+               <a href="https://ring.liampas.ca/random" class="webring-random">Random Site</a>
+               <a href="https://ring.liampas.ca/right" class="webring-arrow" aria-label="Next site">&rarr;</a>
             </div>
-            <div class="sidebar-right">
-                <p class="webring-label">"Cult" Webring</p>
-                <div class="webring">
-                    <a href="https://ring.liampas.ca/left" class="webring-arrow" aria-label="Previous site">&larr;</a>
-                    <a href="https://ring.liampas.ca/random" class="webring-random">Random Site</a>
-                    <a href="https://ring.liampas.ca/right" class="webring-arrow" aria-label="Next site">&rarr;</a>
-                </div>
-                <div class="tree-image">
-                    <a href="https://en.wikipedia.org/wiki/Ternary_numeral_system" target="_blank"><img src="resources/trees.png" alt=""></a>
-                </div>
-                <div class="view-counter"><span id="gc-count">...</span> views</div>
+            <div class="tree-image">
+               <a href="https://en.wikipedia.org/wiki/Ternary_numeral_system" target="_blank"><img
+                     src="resources/trees.png" alt=""></a>
             </div>
-        </div>
+            <div class="view-counter"><span id="gc-count">...</span> views</div>
+         </div>
+      </div>
 
-        <div class="info">
-            <h1>Marcel Putra</h1>
+      <div class="info">
+         <h1>Marcel Putra</h1>
 
-            <p>I am <b><span id="age">20</span></b> years old, and this is my website</p>
-            <!-- <p>I've graduated with a double Bachelor's degree in Computer Science @ APU & DMU at 19</p> -->
-            <p>I have a dual Bachelor's degree in Computer Science @ APU & DMU UK, and I graduated at 19 years old</p>
-            <p>I love doodling, biking, reading, and writing personal projects that look cool</p>
-            <p>Go Mariners! <span class="wavy-trident" style="--nth:0">🔱</span><span class="wavy-trident" style="--nth:1">🔱</span><span class="wavy-trident" style="--nth:2">🔱</span></p>
+         <p>I am <b><span id="age">20</span></b> years old, and this is my website</p>
+         <!-- <p>I've graduated with a double Bachelor's degree in Computer Science @ APU & DMU at 19</p> -->
+         <p>I have a dual Bachelor's degree in Computer Science @ APU & DMU UK, and I graduated at 19 years old</p>
+         <p>I love doodling, biking, reading, and writing personal projects that look cool</p>
+         <p>Go Mariners! <span class="wavy-trident" style="--nth:0">🔱</span><span class="wavy-trident"
+               style="--nth:1">🔱</span><span class="wavy-trident" style="--nth:2">🔱</span></p>
 
-            <p>
-                I am a(n):<br>
-                - <a href="https://www.acm.org/chapters/new-chapters" target="_blank">ACM SIGGRAPH</a> Student Chapter Member<br>
-                - Active Bookclub Reader
-            </p>
+         <p>
+            I am a(n):<br>
+            - <a href="https://www.acm.org/chapters/new-chapters" target="_blank">ACM SIGGRAPH</a> Student Chapter
+            Member<br>
+            - Active Bookclub Reader
+         </p>
 
-            <p>
-                I currently work in computer vision and am involved with optics, cameras, and lasers
-            </p>
+         <p>
+            I currently work in computer vision and am involved with optics, cameras, and lasers
+         </p>
 
-            <p>
-                I did my 120 page <a href="resources/Procedural Modeling.pdf" target="_blank">undergrad thesis</a> on a procedural city algorithm
-            </p>
+         <p>
+            I did my 120 page <a href="resources/Procedural Modeling.pdf" target="_blank">undergrad thesis</a> on a
+            procedural city algorithm
+         </p>
 
-            <p>You can contact me through email. I am slow to respond, but will almost always do</p>
-            <p>Or if you want to be funny DM me on Instagram :<</p>
+         <p>You can contact me through email. I am slow to respond, but will almost always do</p>
+         <p>Or if you want to be funny DM me on Instagram :<< /p>
 
-            <p class="links">
-                <!-- <a href="projects.html">Projects</a> • -->
-                <a href="https://github.com/mrclputra" target="_blank">GitHub</a> •
-                <a href="https://www.instagram.com/mrclputra/" target="_blank">Instagram</a>
-            </p>
+               <p class="links">
+                  <!-- <a href="projects.html">Projects</a> • -->
+                  <a href="https://github.com/mrclputra" target="_blank">GitHub</a> •
+                  <a href="https://www.instagram.com/mrclputra/" target="_blank">Instagram</a>
+               </p>
 
-            <p class="disclaimer">Posts and opinions are my own.</p>
+               <p class="disclaimer">Posts and opinions are my own.</p>
 
-            <div class="contact">
-                <p class="contact-label">Contact Me</p>
-                <p class="contact-details">
-                    • marcelino.ares.putra@gmail.com<br>
-                    • TP066419@mail.apu.edu.my
-                    <!-- marcelino.ares.putra@gmail.com &nbsp;•&nbsp; TP066419@mail.apu.edu.my -->
-                </p>
-            </div>
-        </div>
-    </div>
+               <div class="contact">
+                  <p class="contact-label">Contact Me</p>
+                  <p class="contact-details">
+                     • marcelino.ares.putra@gmail.com<br>
+                     • TP066419@mail.apu.edu.my
+                     <!-- marcelino.ares.putra@gmail.com &nbsp;•&nbsp; TP066419@mail.apu.edu.my -->
+                  </p>
+               </div>
+      </div>
+   </div>
 
-    <div class="spacecraft-banner">
-        <a href="https://www.projectrho.com/public_html/rocket/enginelist3.php#toroidalfusion" target="_blank" rel="noopener">
-            <img src="resources/spacecraft.png" alt="spacecraft">
-        </a>
-    </div>
+   <div class="spacecraft-banner">
+      <a href="https://www.projectrho.com/public_html/rocket/enginelist3.php#toroidalfusion" target="_blank"
+         rel="noopener">
+         <img src="resources/spacecraft.png" alt="spacecraft">
+      </a>
+   </div>
 
-    <div class="proverb-separator">
-        <a href="https://www.omniglot.com/conscripts/dovahzul.htm" target="_blank" class="proverb-track">
-            <img src="resources/dragon.png" alt="">
-            <img src="resources/dragon.png" alt="" aria-hidden="true">
-            <img src="resources/dragon.png" alt="" aria-hidden="true">
-            <img src="resources/dragon.png" alt="" aria-hidden="true">
-        </a>
-    </div>
+   <div class="proverb-separator">
+      <a href="https://www.omniglot.com/conscripts/dovahzul.htm" target="_blank" class="proverb-track">
+         <img src="resources/dragon.png" alt="">
+         <img src="resources/dragon.png" alt="" aria-hidden="true">
+         <img src="resources/dragon.png" alt="" aria-hidden="true">
+         <img src="resources/dragon.png" alt="" aria-hidden="true">
+      </a>
+   </div>
 
-    <div class="showcase">
-        <!-- <h2>Projects</h2> -->
+   <div class="showcase">
+      <!-- <h2>Projects</h2> -->
 
-        <div class="showcase-grid">
-            <a href="https://github.com/mrclputra/qt6-viewer" target="_blank" style="--r: -2deg;">
-                <video src="resources/caldera_25_05_2026.mp4" class="showcase-img" data-pair="4" autoplay loop muted playsinline></video>
-                <img src="resources/Caldera_UfhpCkFnvW.jpg" class="showcase-img" data-pair="4">
-                <img src="resources/Caldera_GHI6KrxQre.jpg" class="showcase-img" data-pair="4">
-            </a>
-            <a href="https://github.com/mrclputra/bevy_tracksat" target="_blank" class="featured" style="--r: 1.5deg;">
-                <img src="resources/mountains.jpg" class="showcase-img" data-pair="1">
-                <video src="resources/tracksat.mp4" class="showcase-img" data-pair="1" autoplay loop muted playsinline></video>
-                <img src="resources/satellites.png" class="showcase-img" data-pair="1">
-            </a>
-            <a href="https://github.com/mrclputra/bevy_citygen_V3" target="_blank" class="featured" style="--r: -1deg;">
-                <video src="resources/voronoi_editor.mp4" class="showcase-img" data-pair="2" autoplay loop muted playsinline></video>
-                <img src="resources/fyp_v2.png" class="showcase-img" data-pair="2">
-                <img src="resources/buildings.png" class="showcase-img" data-pair="2">
-            </a>
-            <a href="https://github.com/mrclputra/MerlinGL" target="_blank" style="--r: 2deg;">
-                <img src="resources/Sandbox_CJQ0hVdbmF.jpg" class="showcase-img" data-pair="3">
-                <img src="resources/Sandbox_YjYo35QXNg.png" class="showcase-img" data-pair="3">
-                <img src="resources/Sandbox_zfsBJucI4Y.jpg" class="showcase-img" data-pair="3">
-                <!-- <img src="resources/Sandbox.png" class="showcase-img" data-pair="3"> -->
-            </a>
-            <a href="https://github.com/mrclputra/KestrelGL" target="_blank" style="--r: -1.5deg;">
-                <video src="resources/KestrelGL_GABdJiYaBU.mp4" class="showcase-img" data-pair="5" autoplay loop muted playsinline></video>
-                <img src="resources/KestrelGL_D5BrKsnBUd.jpg" class="showcase-img" data-pair="5">
-                <img src="resources/KestrelGL_TpyQbNgv4p.jpg" class="showcase-img" data-pair="5">
-                <!-- <img src="resources/KestrelGL_wire.png" class="showcase-img" data-pair="5"> -->
-                <img src="resources/KestrelGL_EySC2QW3BR.png" class="showcase-img" data-pair="5">
-                <img src="resources/KestrelGL_pdy57cjh6y.png" class="showcase-img" data-pair="5">
-            </a>
-            <a href="https://github.com/mrclputra/Glff" target="_blank" style="--r: 1deg;">
-                <video src="resources/topgun.mp4" class="showcase-img" autoplay loop muted playsinline></video>
-            </a>
-        </div>
-    </div>
+      <div class="showcase-grid">
+         <a href="https://github.com/mrclputra/qt6-viewer" target="_blank" style="--r: -2deg;">
+            <video src="resources/caldera_25_05_2026.mp4" class="showcase-img" data-pair="4" autoplay loop muted
+               playsinline></video>
+            <img src="resources/Caldera_UfhpCkFnvW.jpg" class="showcase-img" data-pair="4">
+            <img src="resources/Caldera_GHI6KrxQre.jpg" class="showcase-img" data-pair="4">
+         </a>
+         <a href="https://github.com/mrclputra/bevy_tracksat" target="_blank" class="featured" style="--r: 1.5deg;">
+            <img src="resources/mountains.jpg" class="showcase-img" data-pair="1">
+            <video src="resources/tracksat.mp4" class="showcase-img" data-pair="1" autoplay loop muted
+               playsinline></video>
+            <img src="resources/satellites.png" class="showcase-img" data-pair="1">
+         </a>
+         <a href="https://github.com/mrclputra/bevy_citygen_V3" target="_blank" class="featured" style="--r: -1deg;">
+            <video src="resources/voronoi_editor.mp4" class="showcase-img" data-pair="2" autoplay loop muted
+               playsinline></video>
+            <img src="resources/fyp_v2.png" class="showcase-img" data-pair="2">
+            <img src="resources/buildings.png" class="showcase-img" data-pair="2">
+         </a>
+         <a href="https://github.com/mrclputra/MerlinGL" target="_blank" style="--r: 2deg;">
+            <img src="resources/Sandbox_CJQ0hVdbmF.jpg" class="showcase-img" data-pair="3">
+            <img src="resources/Sandbox_YjYo35QXNg.png" class="showcase-img" data-pair="3">
+            <img src="resources/Sandbox_zfsBJucI4Y.jpg" class="showcase-img" data-pair="3">
+            <!-- <img src="resources/Sandbox.png" class="showcase-img" data-pair="3"> -->
+         </a>
+         <a href="https://github.com/mrclputra/KestrelGL" target="_blank" style="--r: -1.5deg;">
+            <video src="resources/KestrelGL_GABdJiYaBU.mp4" class="showcase-img" data-pair="5" autoplay loop muted
+               playsinline></video>
+            <img src="resources/KestrelGL_D5BrKsnBUd.jpg" class="showcase-img" data-pair="5">
+            <img src="resources/KestrelGL_TpyQbNgv4p.jpg" class="showcase-img" data-pair="5">
+            <!-- <img src="resources/KestrelGL_wire.png" class="showcase-img" data-pair="5"> -->
+            <img src="resources/KestrelGL_EySC2QW3BR.png" class="showcase-img" data-pair="5">
+            <img src="resources/KestrelGL_pdy57cjh6y.png" class="showcase-img" data-pair="5">
+         </a>
+         <a href="https://github.com/mrclputra/Glff" target="_blank" style="--r: 1deg;">
+            <video src="resources/topgun.mp4" class="showcase-img" autoplay loop muted playsinline></video>
+         </a>
+      </div>
+   </div>
 
-    <details class="quote" open>
-        <summary></summary>
-        <p id="quote-text">If you ever go out the back door, remember to water the flowers</p>
-    </details>
+   <details class="quote" open>
+      <summary></summary>
+      <p id="quote-text">If you ever go out the back door, remember to water the flowers</p>
+   </details>
 
-    <div class="extras">
-        <p>
-            I'm becoming very wary of AI crawlers and of what I post on the internet. <br>I don't know if it is possible, but if we could, maybe we should undo it all and start anew
-        </p>
-        <div class="extras-border characters-row">
-            <img src="resources/bow_ashigaru.png" class="char-bow">
-            <img src="resources/yari_ashigaru.png" class="char-yari">
-        </div>
-        <div class="extras-border">
-            <img src="resources/border.png">
-        </div>
-        <p>
-            I like Debian, <br>but WSL will have to do :>
-        </p>
-        <a href="https://packages.msys2.org/packages/mingw-w64-x86_64-llvm" target="_blank">
-            <img src="resources/88x31/powered-llvm.gif" width="88" height="31" alt="">
-        </a>
-    </div>
+   <div class="extras">
+      <p>
+         I'm becoming very wary of AI crawlers and of what I post on the internet. <br>I don't know if it is possible,
+         but if we could, maybe we should undo it all and start anew
+      </p>
+      <div class="extras-border characters-row">
+         <img src="resources/bow_ashigaru.png" class="char-bow">
+         <img src="resources/yari_ashigaru.png" class="char-yari">
+      </div>
+      <div class="extras-border">
+         <img src="resources/border.png">
+      </div>
+      <p>
+         I like Debian, <br>but WSL will have to do :>
+      </p>
+      <a href="https://packages.msys2.org/packages/mingw-w64-x86_64-llvm" target="_blank">
+         <img src="resources/88x31/powered-llvm.gif" width="88" height="31" alt="">
+      </a>
+   </div>
 
-    <details class="code-configs" open>
-        <summary>code-configs</summary>
-        <div class="code-configs-grid">
-            <div>
-                <span class="code-configs-label">.clang-format, yes 3-tab spacing is awesome</span>
-                <pre>BasedOnStyle: LLVM
-SeparateDefinitionBlocks: Leave
-IndentWidth: 3
-TabWidth: 3
-UseTab: Never
-ColumnLimit: 0
+   <details class="code-configs" open>
+      <summary>code-configs</summary>
+      <div class="code-configs-grid">
+         <div>
+            <span class="code-configs-label">.clang-format, yes 3-tab spacing is awesome</span>
+            <pre>BasedOnStyle: LLVM
+               SeparateDefinitionBlocks: Leave
+               IndentWidth: 3
+               TabWidth: 3
+               UseTab: Never
+               ColumnLimit: 0
 
-AlignAfterOpenBracket: Align
-AlignConsecutiveAssignments: false
-AlignConsecutiveDeclarations: false
-AlignEscapedNewlines: Right
-AlignOperands: true
-AlignTrailingComments: true
+               AlignAfterOpenBracket: Align
+               AlignConsecutiveAssignments: false
+               AlignConsecutiveDeclarations: false
+               AlignEscapedNewlines: Right
+               AlignOperands: true
+               AlignTrailingComments: true
 
-BreakBeforeBraces: Attach
-Cpp11BracedListStyle: true
+               BreakBeforeBraces: Attach
+               Cpp11BracedListStyle: true
 
-AllowShortFunctionsOnASingleLine: Empty
-AllowShortIfStatementsOnASingleLine: true
-AllowShortLoopsOnASingleLine: true
+               AllowShortFunctionsOnASingleLine: Empty
+               AllowShortIfStatementsOnASingleLine: true
+               AllowShortLoopsOnASingleLine: true
 
-SpaceAfterCStyleCast: false
-SpaceAfterTemplateKeyword: true
-SpaceBeforeAssignmentOperators: true
-SpaceBeforeParens: ControlStatements
-SpaceInEmptyParentheses: false
-SpacesBeforeTrailingComments: 2
-SpacesInAngles: false
-SpacesInCStyleCastParentheses: false
-SpacesInParentheses: false
-SpacesInSquareBrackets: false
+               SpaceAfterCStyleCast: false
+               SpaceAfterTemplateKeyword: true
+               SpaceBeforeAssignmentOperators: true
+               SpaceBeforeParens: ControlStatements
+               SpaceInEmptyParentheses: false
+               SpacesBeforeTrailingComments: 2
+               SpacesInAngles: false
+               SpacesInCStyleCastParentheses: false
+               SpacesInParentheses: false
+               SpacesInSquareBrackets: false
 
-SortIncludes: false
-IncludeBlocks: Preserve</pre>
-            </div>
-            <div>
-                <span class="code-configs-label">run.sh, I use this template a lot</span>
-                <pre>#!/bin/bash
-set -e
+               SortIncludes: false
+               IncludeBlocks: Preserve</pre>
+         </div>
+         <div>
+            <span class="code-configs-label">run.sh, I use this template a lot</span>
+            <pre>#!/bin/bash
+               set -e
 
-BUILD_DIR="build"
-VCPKG_PATH="${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
-TARGET_NAME="caldera"
+               BUILD_DIR="build"
+               VCPKG_PATH="${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+               TARGET_NAME="caldera"
 
-#rm -rf "$BUILD_DIR"
+               #rm -rf "$BUILD_DIR"
 
-# use clang binaries
-cmake -B "$BUILD_DIR" -S . \
-  -G Ninja \
-  -DCMAKE_C_COMPILER="clang" \
-  -DCMAKE_CXX_COMPILER="clang++" \
-  -DCMAKE_BUILD_TYPE=Release \
-  -DVCPKG_TARGET_TRIPLET=x64-mingw-dynamic \
-  -DCMAKE_TOOLCHAIN_FILE="$VCPKG_PATH" \
-  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+               # use clang binaries
+               cmake -B "$BUILD_DIR" -S . \
+               -G Ninja \
+               -DCMAKE_C_COMPILER="clang" \
+               -DCMAKE_CXX_COMPILER="clang++" \
+               -DCMAKE_BUILD_TYPE=Release \
+               -DVCPKG_TARGET_TRIPLET=x64-mingw-dynamic \
+               -DCMAKE_TOOLCHAIN_FILE="$VCPKG_PATH" \
+               -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 
-cmake --build "$BUILD_DIR"
+               cmake --build "$BUILD_DIR"
 
-cd "$BUILD_DIR"
-./"$TARGET_NAME".exe</pre>
-            </div>
-        </div>
-    </details>
-    <img src="resources/gallery_label.png" class="gallery-label" alt="">
+               cd "$BUILD_DIR"
+               ./"$TARGET_NAME".exe</pre>
+         </div>
+      </div>
+   </details>
+   <img src="resources/gallery_label.png" class="gallery-label" alt="">
 
-    <!-- TODO: implement an actual independent gallery page for all my cool pictures -->
-    <div class="gallery">
-        <!-- <h2>gallery</h2> -->
-        <div class="gallery-board">
-            <img src="resources/NeRF_source0_depth.png" class="gallery-img" style="--r: -4deg;" data-caption="cool neural stereoscopic depth image I generated using MVSA, CVPR2025">
-            <img src="resources/catscan.png" class="gallery-img" style="--r: 3deg;" data-caption="cat scan... haha get it?">
-            <img src="resources/wayang.png" class="gallery-img" style="--r: 5deg;" data-caption="wayang">
-            <img src="resources/10billion.png" class="gallery-img" style="--r: -2deg;" data-caption="Barnsley Fern; coding challenges are worthwhile and fun to do">
-            <img src="resources/coin_normal.png" class="gallery-img" style="--r: -3.5deg;" data-caption="normal map of a coin I scanned, look at those details...">
-            <img src="resources/buddha.jpg" class="gallery-img" style="--r: 4.5deg;" data-caption="">
-            <img src="resources/temple.jpg" class="gallery-img" style="--r: -1.5deg;" data-caption="you might recognize this image">
-            <img src="resources/repetition.jpg" class="gallery-img" style="--r: 2.5deg;" data-caption="we are slaves to repetition">
-            <img src="resources/medusa.jpg" class="gallery-img" style="--r: -4.5deg;" data-caption="raft of medusa">
-            <img src="resources/uterus.jpg" class="gallery-img" style="--r: 1.5deg;" data-caption="uterus">
-            <img src="resources/shadows.jpg" class="gallery-img" style="--r: -2.5deg;" data-caption="i love how the shadows create double images">
-            <img src="resources/jogja.jpg" class="gallery-img" style="--r: 3.5deg;" data-caption="">
-        </div>
-    </div>
+   <!-- TODO: implement an actual independent gallery page for all my cool pictures -->
+   <div class="gallery">
+      <!-- <h2>gallery</h2> -->
+      <div class="gallery-board">
+         <img src="resources/NeRF_source0_depth.png" class="gallery-img" style="--r: -4deg;"
+            data-caption="cool neural stereoscopic depth image I generated using MVSA, CVPR2025">
+         <img src="resources/catscan.png" class="gallery-img" style="--r: 3deg;"
+            data-caption="cat scan... haha get it?">
+         <img src="resources/wayang.png" class="gallery-img" style="--r: 5deg;" data-caption="wayang">
+         <img src="resources/10billion.png" class="gallery-img" style="--r: -2deg;"
+            data-caption="Barnsley Fern; coding challenges are worthwhile and fun to do">
+         <img src="resources/coin_normal.png" class="gallery-img" style="--r: -3.5deg;"
+            data-caption="normal map of a coin I scanned, look at those details...">
+         <img src="resources/buddha.jpg" class="gallery-img" style="--r: 4.5deg;" data-caption="">
+         <img src="resources/temple.jpg" class="gallery-img" style="--r: -1.5deg;"
+            data-caption="you might recognize this image">
+         <img src="resources/repetition.jpg" class="gallery-img" style="--r: 2.5deg;"
+            data-caption="we are slaves to repetition">
+         <img src="resources/medusa.jpg" class="gallery-img" style="--r: -4.5deg;" data-caption="raft of medusa">
+         <img src="resources/uterus.jpg" class="gallery-img" style="--r: 1.5deg;" data-caption="uterus">
+         <img src="resources/shadows.jpg" class="gallery-img" style="--r: -2.5deg;"
+            data-caption="i love how the shadows create double images">
+         <img src="resources/jogja.jpg" class="gallery-img" style="--r: 3.5deg;" data-caption="">
+      </div>
+   </div>
 
-    <dialog class="lightbox">
-        <img class="lightbox-img" src="" alt="">
-        <p class="lightbox-caption"></p>
-    </dialog>
+   <dialog class="lightbox">
+      <img class="lightbox-img" src="" alt="">
+      <p class="lightbox-caption"></p>
+   </dialog>
 
-    <div class="goodies-link">
-        <!-- More Goodies <a href="goodies.html">Here</a> -->
-        More <a href="goodies.html">Goodies</a>...
-    </div>
+   <div class="goodies-link">
+      <!-- More Goodies <a href="goodies.html">Here</a> -->
+      More <a href="goodies.html">Goodies</a>...
+   </div>
 </body>
+
 </html>
