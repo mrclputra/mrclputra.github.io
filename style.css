@@ -32,6 +32,61 @@ body {
 
 /* index */
 
+.scibar {
+    position: relative;
+    max-width: 1200px;
+    margin: 34px auto 20px;
+    padding: 0 20px;
+}
+
+.scibar-bar {
+    height: 8px;
+    border-radius: 0;
+    background: linear-gradient(to right,
+        #440154 0%, #440154 12.5%,
+        #46327e 12.5%, #46327e 25%,
+        #365c8d 25%, #365c8d 37.5%,
+        #277f8e 37.5%, #277f8e 50%,
+        #1fa187 50%, #1fa187 62.5%,
+        #4ac16d 62.5%, #4ac16d 75%,
+        #a0da39 75%, #a0da39 87.5%,
+        #fde725 87.5%, #fde725 100%);
+}
+
+.scibar-tick {
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    pointer-events: none;
+}
+
+.scibar-tick-low {
+    left: 20px;
+    transform: translateX(-50%);
+}
+
+.scibar-tick-high {
+    right: 20px;
+    transform: translateX(50%);
+}
+
+.scibar-tick-mark {
+    width: 1px;
+    height: 6px;
+    background: #999;
+}
+
+.scibar-tick-label {
+    font-size: 0.65rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
 .spacecraft-banner {
     max-width: 1200px;
     margin: 20px auto 0;
