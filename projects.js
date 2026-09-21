@@ -1,12 +1,7 @@
-const pairs = new Map();
+document.querySelectorAll('.showcase-grid a').forEach((a, index) => {
+    const imgs = [...a.querySelectorAll('.showcase-img')];
+    if (imgs.length < 2) return;
 
-document.querySelectorAll('[data-pair]').forEach(img => {
-    const key = img.dataset.pair;
-    if (!pairs.has(key)) pairs.set(key, []);
-    pairs.get(key).push(img);
-});
-
-[...pairs.values()].forEach((imgs, index) => {
     let i = 0;
     function next() {
         // gifs should be longer
