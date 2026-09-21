@@ -101,10 +101,6 @@ body {
     margin: 0 auto;
 }
 
-/* spacecraft.png is much wider than tall, so on narrow portrait phones
-   it renders as a thin strip. Rotating it 90deg lets it use the phone's
-   full height instead, since portrait phone aspect ratios are close to
-   this image's landscape aspect ratio rotated on its side. */
 @media (max-width: 600px) and (orientation: portrait) {
     .spacecraft-banner {
         width: 100%;
@@ -281,7 +277,6 @@ p {
 
 .contact-details {
     font-size: 0.85rem;
-    line-height: 1.5;
 }
 
 .view-counter {
@@ -572,7 +567,6 @@ p {
     cursor: pointer;
     border-bottom: 1px solid #333;
     font-size: 1.0rem;
-    line-height: 1.4;
 }
 
 .quote summary::before {
@@ -591,7 +585,6 @@ details[open].quote summary::before {
     margin-top: 10px;
     padding: 10px;
     border: 1px solid #333;
-    line-height: 1.5;
 }
 
 .extras > a img {
@@ -647,7 +640,6 @@ details[open].code-configs summary::before {
     padding: 8px 10px;
     border: 1px solid #ccc;
     font-size: 0.75rem;
-    line-height: 1.5;
     color: #333;
     background: #fafafa;
     text-align: left;
@@ -762,7 +754,6 @@ details[open].code-configs summary::before {
 .lightbox-caption {
     margin-top: 12px;
     font-size: 0.95rem;
-    line-height: 1.5;
     color: #333;
 }
 
