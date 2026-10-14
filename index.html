@@ -190,74 +190,77 @@
       </a>
    </div>
 
+   <!-- beautify ignore:start -->
+   <!-- prettier-ignore -->
    <details class="code-configs" open>
       <summary>code-configs</summary>
       <div class="code-configs-grid">
          <div>
             <span class="code-configs-label">.clang-format</span>
             <pre>BasedOnStyle: LLVM
-               SeparateDefinitionBlocks: Leave
-               IndentWidth: 3
-               TabWidth: 3
-               UseTab: Never
-               ColumnLimit: 0
+SeparateDefinitionBlocks: Leave
+IndentWidth: 3
+TabWidth: 3
+UseTab: Never
+ColumnLimit: 0
 
-               AlignAfterOpenBracket: Align
-               AlignConsecutiveAssignments: false
-               AlignConsecutiveDeclarations: false
-               AlignEscapedNewlines: Right
-               AlignOperands: true
-               AlignTrailingComments: true
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignEscapedNewlines: Right
+AlignOperands: true
+AlignTrailingComments: true
 
-               BreakBeforeBraces: Attach
-               Cpp11BracedListStyle: true
+BreakBeforeBraces: Attach
+Cpp11BracedListStyle: true
 
-               AllowShortFunctionsOnASingleLine: Empty
-               AllowShortIfStatementsOnASingleLine: true
-               AllowShortLoopsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
 
-               SpaceAfterCStyleCast: false
-               SpaceAfterTemplateKeyword: true
-               SpaceBeforeAssignmentOperators: true
-               SpaceBeforeParens: ControlStatements
-               SpaceInEmptyParentheses: false
-               SpacesBeforeTrailingComments: 2
-               SpacesInAngles: false
-               SpacesInCStyleCastParentheses: false
-               SpacesInParentheses: false
-               SpacesInSquareBrackets: false
+SpaceAfterCStyleCast: false
+SpaceAfterTemplateKeyword: true
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 2
+SpacesInAngles: false
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
 
-               SortIncludes: false
-               IncludeBlocks: Preserve</pre>
+SortIncludes: false
+IncludeBlocks: Preserve</pre>
          </div>
          <div>
             <span class="code-configs-label">run.sh, I use this template a lot</span>
             <pre>#!/bin/bash
-               set -e
+set -e
 
-               BUILD_DIR="build"
-               VCPKG_PATH="${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
-               TARGET_NAME="caldera"
+BUILD_DIR="build"
+VCPKG_PATH="${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+TARGET_NAME="caldera"
 
-               #rm -rf "$BUILD_DIR"
+#rm -rf "$BUILD_DIR"
 
-               # use clang binaries
-               cmake -B "$BUILD_DIR" -S . \
-               -G Ninja \
-               -DCMAKE_C_COMPILER="clang" \
-               -DCMAKE_CXX_COMPILER="clang++" \
-               -DCMAKE_BUILD_TYPE=Release \
-               -DVCPKG_TARGET_TRIPLET=x64-mingw-dynamic \
-               -DCMAKE_TOOLCHAIN_FILE="$VCPKG_PATH" \
-               -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+# use clang binaries
+cmake -B "$BUILD_DIR" -S . \
+    -G Ninja \
+    -DCMAKE_C_COMPILER="clang" \
+    -DCMAKE_CXX_COMPILER="clang++" \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DVCPKG_TARGET_TRIPLET=x64-mingw-dynamic \
+    -DCMAKE_TOOLCHAIN_FILE="$VCPKG_PATH" \
+    -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 
-               cmake --build "$BUILD_DIR"
+cmake --build "$BUILD_DIR"
 
-               cd "$BUILD_DIR"
-               ./"$TARGET_NAME".exe</pre>
+cd "$BUILD_DIR"
+./"$TARGET_NAME".exe</pre>
          </div>
       </div>
    </details>
+   <!-- beautify ignore:end -->
    <img src="resources/gallery_label.png" class="gallery-label" alt="">
 
    <!-- TODO: implement an actual independent gallery page for all my cool pictures -->
